@@ -14,15 +14,14 @@ class ViewController: UIViewController {
     var screenWidth:CGFloat = 0;
     
     let fontName:String = "cubeicons-font"
-    let width:CGFloat = 100
-    let height:CGFloat = 100
-    let margin:CGFloat = 50;
+    let width:CGFloat = 50
+    let height:CGFloat = 50
+    let margin:CGFloat = 20;
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         screenWidth = self.view.frame.size.width
-        
         {% for glyph in glyphs %}
         self.addIcon(FontIcons.{{ glyph.name_no_dash }}()){% endfor %}
     }
@@ -32,7 +31,7 @@ class ViewController: UIViewController {
         let column = floor((screenWidth -  margin) / (width + margin));
         
         let num = CGFloat(self.num);
-        let top = height * floor(num / column) + margin;
+        let top = (height + margin) * floor(num / column) + margin + 30;
         let left = (width + margin) * (num % column) + margin;
         
         let uiLable:UILabel = UILabel(frame: CGRectMake(left, top, width, height))
@@ -41,6 +40,7 @@ class ViewController: UIViewController {
         uiLable.text = icon
         uiLable.textAlignment = NSTextAlignment.Center;
         uiLable.textColor = UIColor.redColor()
+        uiLable.backgroundColor = UIColor.grayColor()
         
         self.num = self.num + 1;
     }
