@@ -1,0 +1,28 @@
+{
+  "name": "icon-font-for-multiple-platforms",
+  "version": "1.2.0",
+  "homepage": "https://github.com/liaohuqiu/icon-font-for-multiple-platforms",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cognitom/icon-font-for-multiple-platforms.git"
+  },
+  "description": "Symbol font templates for Sketch.app",
+  "scripts": {},
+  "keywords": [],
+  "author": "Tsutomu Kawamura <tsutomu@librize.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "del": "^2.1.0",
+    "exec": "^0.2.1",
+    "fs-sync": "^1.0.1",
+    "gulp": "^3.9.0",
+    "gulp-consolidate": "^0.1.2",
+    "gulp-iconfont": "^5.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sketch": "^0.1.0",
+    "node-fs-extra": "^0.8.1",
+    "promise": "^7.0.4",
+    "q": "^1.4.1",
+    "swig": "^1.4.2"
+  }
+}

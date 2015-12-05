@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "{{ fontName }}";
+  src: url('{{ fontPath }}{{ fontName }}.eot');
+  src: url('{{ fontPath }}{{ fontName }}.eot?#iefix') format('eot'),
+    url('{{ fontPath }}{{ fontName }}.woff') format('woff'),
+    url('{{ fontPath }}{{ fontName }}.ttf') format('truetype'),
+    url('{{ fontPath }}{{ fontName }}.svg#{{ fontName }}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+{% for glyph in glyphs %}
+.{{ className }}-{{ glyph.name }}:before{% if not loop.last %}, {% endif %}{% endfor %}{
+  font-family: "{{ fontName }}";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-decoration: inherit;
+}
+{% for glyph in glyphs %}
+.{{ className }}-{{ glyph.name }}:before { content: "\{{ glyph.unicode }}" }{% endfor %}
