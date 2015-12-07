@@ -15,7 +15,7 @@
 		E45771D61C10D0FD00B875DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E45771D41C10D0FD00B875DA /* LaunchScreen.storyboard */; };
 		E45771E11C10D0FD00B875DA /* icon_font_for_ios_exampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45771E01C10D0FD00B875DA /* icon_font_for_ios_exampleTests.swift */; };
 		E45771EC1C10D0FD00B875DA /* icon_font_for_ios_exampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45771EB1C10D0FD00B875DA /* icon_font_for_ios_exampleUITests.swift */; };
-		E45771FC1C10F0CA00B875DA /* {{ fontName }}.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E45771FB1C10F0CA00B875DA /* {{ fontName }}.ttf */; };
+		E45771FC1C10F0CA00B875DA /* {{ font_name }}.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E45771FB1C10F0CA00B875DA /* {{ font_name }}.ttf */; };
 		E49705671C10FBF700182069 /* FontData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49705661C10FBF700182069 /* FontData.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +51,7 @@
 		E45771E71C10D0FD00B875DA /* icon-font-for-ios-exampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "icon-font-for-ios-exampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E45771EB1C10D0FD00B875DA /* icon_font_for_ios_exampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = icon_font_for_ios_exampleUITests.swift; sourceTree = "<group>"; };
 		E45771ED1C10D0FD00B875DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E45771FB1C10F0CA00B875DA /* {{ fontName }}.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "{{ fontName }}.ttf"; sourceTree = "<group>"; };
+		E45771FB1C10F0CA00B875DA /* {{ font_name }}.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "{{ font_name }}.ttf"; sourceTree = "<group>"; };
 		E49705661C10FBF700182069 /* FontData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,7 +108,7 @@
 				E45771CC1C10D0FD00B875DA /* Main.storyboard */,
 				E45771D21C10D0FD00B875DA /* Assets.xcassets */,
 				E45771D41C10D0FD00B875DA /* LaunchScreen.storyboard */,
-				E45771FB1C10F0CA00B875DA /* {{ fontName }}.ttf */,
+				E45771FB1C10F0CA00B875DA /* {{ font_name }}.ttf */,
 				E45771D71C10D0FD00B875DA /* Info.plist */,
 				E45771CF1C10D0FD00B875DA /* icon_font_for_ios_example.xcdatamodeld */,
 				E49705661C10FBF700182069 /* FontData.swift */,
@@ -242,7 +242,7 @@
 				E45771D61C10D0FD00B875DA /* LaunchScreen.storyboard in Resources */,
 				E45771D31C10D0FD00B875DA /* Assets.xcassets in Resources */,
 				E45771CE1C10D0FD00B875DA /* Main.storyboard in Resources */,
-				E45771FC1C10F0CA00B875DA /* {{ fontName }}.ttf in Resources */,
+				E45771FC1C10F0CA00B875DA /* {{ font_name }}.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

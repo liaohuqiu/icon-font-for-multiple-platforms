@@ -8,9 +8,12 @@ var del = require('del');
 var Promise = require('promise');
 var Q = require('q');
 
-var fontName = 'cubeicons-font'; // set name of your symbol font
+var font_name = 'cube-icons'; // the name of the font file
 var fontCssClassNamePre = 'cubeicon'; // set class name in your CSS
-var sketchFileName = 'cube-icons-sample.sketch'; // you can also choose 'symbol-font-16px.sketch'
+
+var android_string_name_pre = fontCssClassNamePre;
+
+var sketch_file_name = 'cube-icons-sample.sketch'; // you can also choose 'symbol-font-16px.sketch'
 var font_path_relative_to_css = '../fonts/'; // set path to font (from your CSS file if relative)
 
 var web_sample_dir = 'samples/web/';
@@ -28,13 +31,13 @@ gulp.task('build', function(){
   var create_font_deferred = Q.defer();
   var build_for_template_deferred = Q.defer();
 
-  gulp.src(sketchFileName)
+  gulp.src(sketch_file_name)
   .pipe(sketch({
     export: 'artboards',
     formats: 'svg'
   }))
   .pipe(iconfont({
-    fontName: fontName,
+    fontName: font_name,
     formats: ['ttf', 'eot', 'woff', 'svg']
   }))
   .on('glyphs', function(glyphs, options) {
@@ -43,15 +46,17 @@ gulp.task('build', function(){
         var codepoint = glyph.unicode[0].charCodeAt(0);
         var unicode = codepoint.toString(16).toUpperCase();
         var unicode_cully_braces_for_swift = '{' + unicode + '}';
+        var name_no_dash = glyph.name.replace('-', '_');
         return {
           name: glyph.name,
-          name_no_dash: glyph.name.replace('-', '_'),
+          name_for_android_string_xml: android_string_name_pre + '_' + name_no_dash,
+          name_no_dash: name_no_dash,
           codepoint: codepoint,
           unicode: unicode,
           unicode_cully_braces_for_swift: unicode_cully_braces_for_swift
         }
       }),
-      fontName: fontName,
+      font_name: font_name,
       fontPath: font_path_relative_to_css,
       className: fontCssClassNamePre
     };
@@ -68,7 +73,7 @@ gulp.task('build', function(){
       // fontawesome-style.css
       gulp.src('templates/web/css/fontawesome-style.css')
       .pipe(consolidate('swig', template_data, { useContents : true }))
-      .pipe(rename({ basename:'fontawesome-' + fontName }))
+      .pipe(rename({ basename:'fontawesome-' + font_name }))
       .pipe(gulp.dest(dist_dir + 'web/css/'))
       .on('end', resolve);
     }),
@@ -76,7 +81,7 @@ gulp.task('build', function(){
       // foundation-style.css
       gulp.src('templates/web/css/foundation-style.css')
       .pipe(consolidate('swig', template_data, { useContents : true }))
-      .pipe(rename({ basename:'foundation-' + fontName }))
+      .pipe(rename({ basename:'foundation-' + font_name }))
       .pipe(gulp.dest(dist_dir + 'web/css/'))
       .on('end', resolve);
     }),
@@ -89,7 +94,7 @@ gulp.task('build', function(){
     }),
     new Promise(function(resolve, reject) {
       // android
-      gulp.src('templates/android/*.*')
+      gulp.src('templates/android/**/*.*')
       .pipe(consolidate('swig', template_data, { useContents : true }))
       .pipe(gulp.dest(dist_dir + '/android/'))
       .on('end', resolve);
@@ -107,7 +112,6 @@ gulp.task('build', function(){
 
 gulp.task('update-sample', ['build'], function(cb) {
   var cmd = 'sh templates/update-sample.sh';
-  console.log(cmd);
   child_process.execSync(cmd);
   cb();
 });

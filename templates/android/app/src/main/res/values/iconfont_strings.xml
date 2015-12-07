@@ -1,0 +1,5 @@
+<resources>
+    <!-- generated code begin -->{% for glyph in glyphs %}
+    <string name="{{ glyph.name_for_android_string_xml }}">\u{{ glyph.unicode }}</string>{% endfor %}
+    <!-- generated code end -->
+</resources>

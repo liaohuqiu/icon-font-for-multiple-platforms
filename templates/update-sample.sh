@@ -7,7 +7,11 @@ cp -rf dist/fonts samples/web/
 mkdir -p samples/ios
 cp -rf templates/samples/ios samples/
 cp -rf dist/ios/* samples/ios/
-if [ ! -f dist/ios/icon-font-for-ios-example/ViewController.swift ]; then
-    echo bad > 1.log
-fi
 cp dist/fonts/*.ttf samples/ios/icon-font-for-ios-example/
+
+# copy file for android
+mkdir -p samples/android
+cp -rf templates/samples/android samples/
+cp -rf dist/android/* samples/android/
+mkdir -p samples/android/app/src/main/assets/
+cp dist/fonts/*.ttf samples/android/app/src/main/assets/

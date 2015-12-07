@@ -1,16 +1,16 @@
 @font-face {
-  font-family: "{{ fontName }}";
-  src: url('{{ fontPath }}{{ fontName }}.eot');
-  src: url('{{ fontPath }}{{ fontName }}.eot?#iefix') format('eot'),
-    url('{{ fontPath }}{{ fontName }}.woff') format('woff'),
-    url('{{ fontPath }}{{ fontName }}.ttf') format('truetype'),
-    url('{{ fontPath }}{{ fontName }}.svg#{{ fontName }}') format('svg');
+  font-family: "{{ font_name }}";
+  src: url('{{ fontPath }}{{ font_name }}.eot');
+  src: url('{{ fontPath }}{{ font_name }}.eot?#iefix') format('eot'),
+    url('{{ fontPath }}{{ font_name }}.woff') format('woff'),
+    url('{{ fontPath }}{{ font_name }}.ttf') format('truetype'),
+    url('{{ fontPath }}{{ font_name }}.svg#{{ font_name }}') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 {% for glyph in glyphs %}
 .{{ className }}-{{ glyph.name }}:before{% if not loop.last %}, {% endif %}{% endfor %}{
-  font-family: "{{ fontName }}";
+  font-family: "{{ font_name }}";
   font-style: normal;
   font-weight: normal;
   font-variant: normal;

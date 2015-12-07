@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     var num = 0;
     var screenWidth:CGFloat = 0;
     
-    let fontName:String = "cubeicons-font"
+    let fontName:String = "{{ font_name }}"
     let width:CGFloat = 50
     let height:CGFloat = 50
     let margin:CGFloat = 20;
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
         uiLable.text = icon
         uiLable.textAlignment = NSTextAlignment.Center;
         uiLable.textColor = UIColor.redColor()
-        uiLable.backgroundColor = UIColor.grayColor()
+        uiLable.backgroundColor = UIColor.lightGrayColor()
         
         self.num = self.num + 1;
     }
