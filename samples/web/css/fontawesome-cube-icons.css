@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "cube-icons";
+  src: url('../fonts/cube-icons.eot');
+  src: url('../fonts/cube-icons.eot?#iefix') format('eot'),
+  url('../fonts/cube-icons.woff') format('woff'),
+  url('../fonts/cube-icons.ttf') format('truetype'),
+  url('../fonts/cube-icons.svg#cube-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.cubeicon:before {
+  display: inline-block;
+  font-family: "cube-icons";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cubeicon-lg {
+  font-size: 1.3333333333333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+.cubeicon-2x { font-size: 2em; }
+.cubeicon-3x { font-size: 3em; }
+.cubeicon-4x { font-size: 4em; }
+.cubeicon-5x { font-size: 5em; }
+.cubeicon-fw {
+  width: 1.2857142857142858em;
+  text-align: center;
+}
+
+.cubeicon-gems-logo:before { content: "\F701" }
+.cubeicon-android:before { content: "\F702" }
+.cubeicon-heart:before { content: "\F703" }

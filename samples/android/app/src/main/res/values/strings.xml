@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">IconFontSample</string>
+    <string name="title_iconfy_style">Iconfy Style</string>
+    <string name="action_iconfy_style">Iconfy Style</string>
+    <string name="action_about">About</string>
+    <string name="tip_1">using unicode defined in JAVA code:</string>
+    <string name="tip_2">using String defined in Xml file:</string>
+</resources>
