@@ -49,7 +49,7 @@ gulp.task('build', function(){
         var name_no_dash = glyph.name.replace('-', '_');
         return {
           name: glyph.name,
-          name_for_android_string_xml: android_string_name_pre + '_' + name_no_dash,
+          name_for_android_string_xml: android_string_name_pre + '_' + glyph.name,
           name_no_dash: name_no_dash,
           codepoint: codepoint,
           unicode: unicode,
@@ -57,8 +57,8 @@ gulp.task('build', function(){
         }
       }),
       font_name: font_name,
-      fontPath: font_path_relative_to_css,
-      className: fontCssClassNamePre
+      font_path: font_path_relative_to_css,
+      css_class_name: fontCssClassNamePre
     };
 
     var promise_list = [

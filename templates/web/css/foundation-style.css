@@ -9,7 +9,7 @@
   font-style: normal;
 }
 {% for glyph in glyphs %}
-.{{ className }}-{{ glyph.name }}:before{% if not loop.last %}, {% endif %}{% endfor %}{
+.{{ css_class_name }}-{{ glyph.name }}:before{% if not loop.last %}, {% endif %}{% endfor %}{
   font-family: "{{ font_name }}";
   font-style: normal;
   font-weight: normal;
@@ -21,4 +21,4 @@
   text-decoration: inherit;
 }
 {% for glyph in glyphs %}
-.{{ className }}-{{ glyph.name }}:before { content: "\{{ glyph.unicode }}" }{% endfor %}
+.{{ css_class_name }}-{{ glyph.name }}:before { content: "\{{ glyph.unicode }}" }{% endfor %}
