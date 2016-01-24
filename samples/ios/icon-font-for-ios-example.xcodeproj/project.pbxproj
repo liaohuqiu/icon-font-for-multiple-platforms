@@ -13,6 +13,8 @@
 		E45771D11C10D0FD00B875DA /* icon_font_for_ios_example.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E45771CF1C10D0FD00B875DA /* icon_font_for_ios_example.xcdatamodeld */; };
 		E45771D31C10D0FD00B875DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E45771D21C10D0FD00B875DA /* Assets.xcassets */; };
 		E45771D61C10D0FD00B875DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E45771D41C10D0FD00B875DA /* LaunchScreen.storyboard */; };
+		E45771E11C10D0FD00B875DA /* icon_font_for_ios_exampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45771E01C10D0FD00B875DA /* icon_font_for_ios_exampleTests.swift */; };
+		E45771EC1C10D0FD00B875DA /* icon_font_for_ios_exampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45771EB1C10D0FD00B875DA /* icon_font_for_ios_exampleUITests.swift */; };
 		E45771FC1C10F0CA00B875DA /* cube-icons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E45771FB1C10F0CA00B875DA /* cube-icons.ttf */; };
 		E49705671C10FBF700182069 /* FontData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49705661C10FBF700182069 /* FontData.swift */; };
 /* End PBXBuildFile section */
@@ -44,7 +46,11 @@
 		E45771D51C10D0FD00B875DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E45771D71C10D0FD00B875DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E45771DC1C10D0FD00B875DA /* icon-font-for-ios-exampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "icon-font-for-ios-exampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E45771E01C10D0FD00B875DA /* icon_font_for_ios_exampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = icon_font_for_ios_exampleTests.swift; sourceTree = "<group>"; };
+		E45771E21C10D0FD00B875DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E45771E71C10D0FD00B875DA /* icon-font-for-ios-exampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "icon-font-for-ios-exampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E45771EB1C10D0FD00B875DA /* icon_font_for_ios_exampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = icon_font_for_ios_exampleUITests.swift; sourceTree = "<group>"; };
+		E45771ED1C10D0FD00B875DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E45771FB1C10F0CA00B875DA /* cube-icons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "cube-icons.ttf"; sourceTree = "<group>"; };
 		E49705661C10FBF700182069 /* FontData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				E45771C71C10D0FD00B875DA /* icon-font-for-ios-example */,
+				E45771DF1C10D0FD00B875DA /* icon-font-for-ios-exampleTests */,
+				E45771EA1C10D0FD00B875DA /* icon-font-for-ios-exampleUITests */,
 				E45771C61C10D0FD00B875DA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -106,6 +114,24 @@
 				E49705661C10FBF700182069 /* FontData.swift */,
 			);
 			path = "icon-font-for-ios-example";
+			sourceTree = "<group>";
+		};
+		E45771DF1C10D0FD00B875DA /* icon-font-for-ios-exampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				E45771E01C10D0FD00B875DA /* icon_font_for_ios_exampleTests.swift */,
+				E45771E21C10D0FD00B875DA /* Info.plist */,
+			);
+			path = "icon-font-for-ios-exampleTests";
+			sourceTree = "<group>";
+		};
+		E45771EA1C10D0FD00B875DA /* icon-font-for-ios-exampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E45771EB1C10D0FD00B875DA /* icon_font_for_ios_exampleUITests.swift */,
+				E45771ED1C10D0FD00B875DA /* Info.plist */,
+			);
+			path = "icon-font-for-ios-exampleUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E45771E11C10D0FD00B875DA /* icon_font_for_ios_exampleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E45771EC1C10D0FD00B875DA /* icon_font_for_ios_exampleUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

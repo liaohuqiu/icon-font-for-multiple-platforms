@@ -11,7 +11,7 @@
     <ul class="glyph">
       {% for glyph in glyphs %}
       <li>
-        <i class="{{ className }} {{ className }}-{{ glyph.name }} {{ className }}-4x"></i>
+        <i class="{{ css_class_name }} {{ css_class_name }}-{{ glyph.name }} {{ css_class_name }}-4x"></i>
         <span class="glyph-name">{{ glyph.name }}</span>
         <span class="glyph-codepoint">{{ glyph.unicode }}</span>
       </li>
@@ -22,7 +22,7 @@
     <ul class="glyph">
       {% for glyph in glyphs %}
       <li>
-        <span class="{{ className }}-{{ glyph.name }}"></span>
+        <span class="{{ css_class_name }}-{{ glyph.name }}"></span>
         <span class="glyph-name">{{ glyph.name }}</span>
         <span class="glyph-codepoint">{{ glyph.unicode }}</span>
       </li>

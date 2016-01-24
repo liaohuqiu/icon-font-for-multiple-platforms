@@ -1,7 +1,6 @@
 # copy file for web
 mkdir -p samples/web
 cp -rf dist/web samples/
-cp -rf dist/fonts samples/web/
 
 # copy file for ios
 mkdir -p samples/ios

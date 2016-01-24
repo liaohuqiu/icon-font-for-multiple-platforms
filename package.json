@@ -4,12 +4,14 @@
   "homepage": "https://github.com/liaohuqiu/icon-font-for-multiple-platforms",
   "repository": {
     "type": "git",
-    "url": "git://github.com/cognitom/icon-font-for-multiple-platforms.git"
+    "url": "git://github.com/liaohuqiu/icon-font-for-multiple-platforms.git"
   },
-  "description": "Symbol font templates for Sketch.app",
-  "scripts": {},
+  "description": "Build iconfont from symbol font templates for Web, iOS and Android",
+  "scripts": {
+    "make": "gulp make"
+  },
   "keywords": [],
-  "author": "Tsutomu Kawamura <tsutomu@librize.com>",
+  "author": "Huqiu Liao <liaohuqiu@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "del": "^2.1.0",

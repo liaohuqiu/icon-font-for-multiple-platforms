@@ -1,4 +1,5 @@
 var gulp = require("gulp");
+var path = require("path");
 var rename = require("gulp-rename");
 var sketch = require("gulp-sketch");
 var iconfont = require('gulp-iconfont');
@@ -11,14 +12,16 @@ var Q = require('q');
 var font_name = 'cube-icons'; // the name of the font file
 var fontCssClassNamePre = 'cubeicon'; // set class name in your CSS
 
-var android_string_name_pre = fontCssClassNamePre;
-
-var sketch_file_name = 'cube-icons-sample.sketch'; // you can also choose 'symbol-font-16px.sketch'
+var sketch_file_name = 'cube-icons-sample.sketch';
 var font_path_relative_to_css = '../fonts/'; // set path to font (from your CSS file if relative)
 
-var web_sample_dir = 'samples/web/';
+var android_string_name_pre = fontCssClassNamePre;
+
 var dist_dir = 'dist/';
+
 var samples_dir = 'samples/';
+var web_sample_dir = 'samples/web/';
+var web_fonts_dir = path.join(path.join(dist_dir,  'web/css/'), font_path_relative_to_css);
 
 gulp.task('clean', function(cb) {
   del.sync(dist_dir);
@@ -46,10 +49,10 @@ gulp.task('build', function(){
         var codepoint = glyph.unicode[0].charCodeAt(0);
         var unicode = codepoint.toString(16).toUpperCase();
         var unicode_cully_braces_for_swift = '{' + unicode + '}';
-        var name_no_dash = glyph.name.replace('-', '_');
+        var name_no_dash = glyph.name.replace(/-/g, '_');
         return {
           name: glyph.name,
-          name_for_android_string_xml: android_string_name_pre + '_' + glyph.name,
+          name_for_android_string_xml: android_string_name_pre + '_' + name_no_dash,
           name_no_dash: name_no_dash,
           codepoint: codepoint,
           unicode: unicode,
@@ -105,9 +108,10 @@ gulp.task('build', function(){
     });
   })
   .pipe(gulp.dest(dist_dir + 'fonts/'))
+  .pipe(gulp.dest(web_fonts_dir))
   .on('end', create_font_deferred.resolve);
 
-  return Q.all([create_font_deferred.promise,build_for_template_deferred.promise])
+  return Q.all([create_font_deferred.promise, build_for_template_deferred.promise])
 });
 
 gulp.task('update-sample', ['build'], function(cb) {
@@ -120,8 +124,4 @@ gulp.task('make', ['clean', 'build', 'update-sample']);
 
 gulp.task('open', function(cb) {
   child_process.execSync('open samples/web/index.html');
-});
-
-gulp.task('watch', function(){
-  gulp.watch('*.sketch/Data', { debounceDelay: 3000 }, ['build']); // wait 3 sec after the last run
 });
