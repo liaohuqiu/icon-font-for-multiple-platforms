@@ -30,7 +30,7 @@
             android:shadowDx="3"
             android:shadowDy="3"
             android:shadowRadius="10"
-            android:textColor="#ff6600"
+            android:textColor="#ff0000"
             android:textSize="40sp" />
 
         <TextView
@@ -47,7 +47,7 @@
             android:shadowDx="3"
             android:shadowDy="3"
             android:shadowRadius="10"
-            android:textColor="#ff6600"
+            android:textColor="#ff0000"
             android:textSize="40sp" />
     </LinearLayout>
 </ScrollView>

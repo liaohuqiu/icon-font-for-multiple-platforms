@@ -8,8 +8,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         var icon = ""
+        // generated code begin
         {% for glyph in glyphs %}
         icon += FontIcons.{{ glyph.name_no_dash }}() {% endfor %}
+        // generated code end
 
         self.addIcon(icon)
     }

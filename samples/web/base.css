@@ -21,11 +21,11 @@ body > h3
   background: #fff;
   border-radius: .5em;
   position: relative;
-  color: #4E9AC4;
+  color: red;
 }
 
 .glyph > li:hover {
-  color: red;
+  color: #EA6C0B;
 }
 
 .glyph > li span:first-child {

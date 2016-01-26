@@ -8,10 +8,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         var icon = ""
+        // generated code begin
         
         icon += FontIcons.gems_logo() 
         icon += FontIcons.android() 
         icon += FontIcons.heart() 
+        // generated code end
 
         self.addIcon(icon)
     }
