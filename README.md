@@ -9,6 +9,11 @@ This project also demos how to use the font files on these platforms.
 
 <div>
     <img src='https://raw.githubusercontent.com/liaohuqiu/icon-font-for-multiple-platforms/master/art/feature.png' width="600px" />
+</div>
+
+Thank you [@Okernel](https://github.com/okernel) for make this feature image:
+
+<div>
     <img src='https://raw.githubusercontent.com/liaohuqiu/icon-font-for-multiple-platforms/master/art/feature-okernel.png' width="600px" />
 </div>
 
@@ -77,4 +82,8 @@ MIT
 
 ### Thanks
 
-This project is mainly based on https://github.com/cognitom/symbols-for-sketch.
+1. This project is mainly based on https://github.com/cognitom/symbols-for-sketch.
+
+2. [@Okernel](https://github.com/okernel)'s beautiful feature image. 
+
+    https://github.com/liaohuqiu/icon-font-for-multiple-platforms/issues/1
