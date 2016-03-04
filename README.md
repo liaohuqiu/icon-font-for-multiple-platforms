@@ -72,8 +72,8 @@ This project also demos how to use the font files on these platforms.
 
 ### License
 
-    MIT
+MIT
 
 ### Thanks
 
-    This project is mainly based on https://github.com/cognitom/symbols-for-sketch.
+This project is mainly based on https://github.com/cognitom/symbols-for-sketch.
