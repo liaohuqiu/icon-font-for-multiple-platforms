@@ -11,17 +11,16 @@ This project also demos how to use the font files on these platforms.
     <img src='https://raw.githubusercontent.com/liaohuqiu/icon-font-for-multiple-platforms/master/art/feature.png' width="600px" />
 </div>
 
-Thank you [@Okernel](https://github.com/okernel) for make this feature image:
+Thank you [@Okernel](https://github.com/okernel) for making this feature image:
 
 <div>
     <img src='https://raw.githubusercontent.com/liaohuqiu/icon-font-for-multiple-platforms/master/art/feature-okernel.png' width="600px" />
 </div>
 
-
 ### Requirements
 
 * Mac
-* Skecth
+* Sketch
 * npm
 
 ### How to use
@@ -32,13 +31,13 @@ Thank you [@Okernel](https://github.com/okernel) for make this feature image:
 
     `sh manage.sh install`
 
-3. Make icon font from Skecth file
+3. Make icon font from Sketch file
 
     ```
     sh manage.sh make
     ```
 
-    `cube-icons-sample.sketch` is a sample Skecth file, you can change your own one.
+    `cube-icons-sample.sketch` is a sample Sketch file, you can change your own one.
 
 4. See what we have
 
