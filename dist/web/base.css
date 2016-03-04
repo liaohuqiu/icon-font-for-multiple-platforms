@@ -1,0 +1,47 @@
+body {
+  font-family: Gill Sans;
+  text-align: center;
+  background: #f7f7f7
+}
+body > h1,
+body > h2,
+body > h3
+{
+  color: #666;
+  margin: 1em 0
+}
+.glyph {
+  padding: 0
+}
+.glyph > li {
+  display: inline-block;
+  margin: .3em .2em;
+  width: 5em;
+  height: 6.5em;
+  background: #fff;
+  border-radius: .5em;
+  position: relative;
+  color: red;
+}
+
+.glyph > li:hover {
+  color: #EA6C0B;
+}
+
+.glyph > li span:first-child {
+  display: block;
+  margin-top: .1em;
+  font-size: 4em;
+  line-height: 0
+}
+
+.glyph-name {
+  font-size: .8em;
+  color: #666;
+  display: block
+}
+
+.glyph-codepoint {
+  color: #999;
+  font-family: monospace
+}

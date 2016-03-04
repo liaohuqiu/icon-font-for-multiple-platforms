@@ -8,7 +8,8 @@
   },
   "description": "Build iconfont from symbol font templates for Web, iOS and Android",
   "scripts": {
-    "make": "gulp make"
+    "make": "gulp make",
+    "open": "gulp open"
   },
   "keywords": [],
   "author": "Huqiu Liao <liaohuqiu@gmail.com>",
@@ -20,10 +21,11 @@
     "gulp-consolidate": "^0.1.2",
     "gulp-iconfont": "^5.0.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sketch": "^0.1.0",
+    "gulp-sketch": "^1.0.3",
     "node-fs-extra": "^0.8.1",
     "promise": "^7.0.4",
     "q": "^1.4.1",
-    "swig": "^1.4.2"
+    "swig": "^1.4.2",
+    "yargs": "^4.2.0"
   }
 }
