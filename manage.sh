@@ -15,10 +15,10 @@ function exe_cmd() {
 function usage() {
     echo ""
     echo "${SCRIPTFILE} -[him]"
-    echo "\t-h               :   this message"
-    echo "\t-i | insall      :   install"
-    echo "\t-m | make        :   make icon font"
-    echo "\t-o | open        :   open sample"
+    echo -e "\t-h               :   this message"
+    echo -e "\t-i | insall      :   install"
+    echo -e "\t-m | make        :   make icon font"
+    echo -e "\t-o | open        :   open sample"
     echo ""
 }
 

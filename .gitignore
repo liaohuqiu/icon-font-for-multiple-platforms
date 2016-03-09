@@ -30,3 +30,5 @@ local.properties
 node_modules/
 
 xcuserdata/
+
+npm-debug.log
